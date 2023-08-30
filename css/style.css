@@ -81,6 +81,9 @@ body {
     background-color: #2B2B2B;
 }
 
+.body-block {
+    overflow: hidden;
+}
 
 .title {
     color: #FFF;
@@ -93,9 +96,9 @@ body {
     text-transform: uppercase;
     text-align: center;
     background: linear-gradient(109deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 }
 
@@ -253,7 +256,7 @@ banner
     top: 0;
     bottom: 0;
     width: 3px;
-    background: #FFA944;
+    background: #FF9519;
     left: 0;
 }
 
@@ -261,7 +264,7 @@ banner
     padding: 22px 100px;
     border: transparent;
     border-radius: 20px;
-    background: #FFA944;
+    background: #FF9519;
     color: #000;
     font-family: Unbounded;
     font-size: 20px;
@@ -363,7 +366,7 @@ banner end
 
 .who p b {
     white-space: nowrap;
-    background-color: #FFA944;
+    background-color: #FF9519;
 }
 
 .who__item-list::after,
@@ -400,7 +403,7 @@ banner end
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: #FFA944;
+    background: #FF9519;
 }
 
 
@@ -469,7 +472,7 @@ who end
     /* 77.175px */
     text-transform: uppercase;
     border-radius: 20px;
-    background: #FFA944;
+    background: #FF9519;
     top: -17px;
     left: -36px;
     aspect-ratio: 1/1;
@@ -589,60 +592,267 @@ who end
     max-width: 243px;
 }
 
+
+
+
+.procces__bottom-title {
+    margin-top: 85px;
+    margin-bottom: 37px;
+}
+
+.procces__bottom-lyst {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    counter-reset: counter-lyst;
+}
+
+.procces__bottom-lyst__item {
+    color: #FFF;
+    font-family: Unbounded;
+    font-size: 20.785px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 154.35%;
+    text-transform: uppercase;
+    max-width: 500px;
+    padding-left: 57px;
+    position: relative;
+    padding: 20px 0 20px 57px;
+}
+
+.procces__bottom-lyst__item::after {
+    content: '';
+    position: absolute;
+    left: 46px;
+    height: 96px;
+    width: 3px;
+    background: #FF9519;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.procces__bottom-lyst__item::before {
+    content: counter(counter-lyst);
+    counter-increment: counter-lyst;
+    color: #FFF;
+    text-align: center;
+    font-family: Unbounded;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 154.35%;
+    /* 77.175px */
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.procces__bottom-lyst__item b {
+    color: #FF9519;
+}
+
 /*procces end*/
-@media (max-width: 607px) {
-    .banner {
-        background-image: url("../img/banner/banner-bg-phone.png");
-        background-position: top;
-    }
 
-    .banner__title {
-        font-size: 18px;
-    }
 
-    .banner__subtext {
-        max-width: 271px;
-        font-size: 13px;
-    }
 
-    .banner__btn {
-        padding: 11px 50px;
-        font-size: 10.16px;
-    }
+.cases {
+    position: relative;
+    z-index: 1;
+}
 
-    .banner__title {
-        max-width: 365px;
-    }
+.container {}
 
-    .who p {
-        font-size: 14px;
-    }
+.cases__container {
+    padding-bottom: 100px;
+}
 
-    .who__item-list__item {
-        font-size: 17px;
-    }
+.title {}
 
-    .getting__list-item {
-        padding: 10px 15px 28px 26px;
+.cases__title {
+    margin: 90px 0;
+}
 
-    }
+.swiper__container {}
 
-    .getting__list-item::before {
-        width: 58.905px;
-        height: 60.26px;
-        font-size: 35.162px;
-    }
+.swiper {}
 
-    .willbe__item-img {
-        width: 41.342px;
-        height: 55.277px;
-    }
+.swiper-wrapper {}
 
-    .willbe__list-item {
-        font-size: 16px;
-    }
+.swiper-slide {
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.swiper-slide__content {
+    padding: 25px;
+}
+
+
+.swiper__content-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.swiper__content-img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.swiper__content-name {
+    color: #000;
+    font-family: Unbounded;
+    font-size: 20.227px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 154.35%;
+    /* 31.221px */
+    text-transform: uppercase;
+}
+
+.gradient-overlay {
+    height: 174px;
+    overflow: hidden;
+}
+
+.gradient-overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    /* Висота затемнення */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    /* Затемнення внизу */
+}
+
+.swiper__content-text {
+    color: #000;
+    font-family: Unbounded;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 154.35%;
+    /* 15.435px */
+    text-transform: uppercase;
+    padding-left: 25px;
+    position: relative;
+}
+
+.swiper__content-read {
+    display: flex;
+    justify-content: flex-end;
+    color: #FF9519;
+    font-family: Unbounded;
+    font-size: 7.83px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 154.35%;
+    /* 12.085px */
+    text-transform: uppercase;
+    font-size: 16.83px;
+    cursor: pointer;
+}
+
+.no-btn {
+    display: none;
+}
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 35%;
+}
+
+.modalActive {
+    display: block;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content-text {
+    color: #000;
+    font-family: Unbounded;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 154.35%;
+    /* 15.435px */
+    text-transform: uppercase;
+    margin-top: 20px;
 
 }
+
+.modal__content-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal__content-top__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    color: #000;
+    font-family: Unbounded;
+    font-size: 20.227px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 154.35%;
+    /* 31.221px */
+    text-transform: uppercase;
+}
+
+.expert {}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
 
 @media (min-width: 1550px) {
     .banner__logo {
@@ -705,6 +915,9 @@ who end
         margin-left: 35px;
     }
 
+    .modal-content {
+        width: 70%;
+    }
 }
 
 @media (max-width: 1020px) {
@@ -751,9 +964,78 @@ who end
         left: 135px;
         width: 250px;
     }
-    .procces__lyst-item__arrow--left{
-        transform: rotate(90deg) scaleY(-1); /* Відзеркалення іконки по горизонталі для кожного другого елемента, починаючи з другого */
+
+    .procces__lyst-item__arrow--left {
+        transform: rotate(90deg) scaleY(-1);
+        /* Відзеркалення іконки по горизонталі для кожного другого елемента, починаючи з другого */
         left: -135px;
     }
-    
+
+}
+
+@media (max-width: 607px) {
+    .banner {
+        background-image: url("../img/banner/banner-bg-phone.png");
+        background-position: top;
+    }
+
+    .banner__title {
+        font-size: 18px;
+    }
+
+    .banner__subtext {
+        max-width: 271px;
+        font-size: 13px;
+    }
+
+    .banner__btn {
+        padding: 11px 50px;
+        font-size: 10.16px;
+    }
+
+    .banner__title {
+        max-width: 365px;
+    }
+
+    .who p {
+        font-size: 14px;
+    }
+
+    .who__item-list__item {
+        font-size: 17px;
+    }
+
+    .getting__list-item {
+        padding: 10px 15px 28px 26px;
+
+    }
+
+    .getting__list-item::before {
+        width: 58.905px;
+        height: 60.26px;
+        font-size: 35.162px;
+    }
+
+    .willbe__item-img {
+        width: 41.342px;
+        height: 55.277px;
+    }
+
+    .willbe__list-item {
+        font-size: 16px;
+    }
+
+    .modal-content-text {
+        font-size: 13px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 40% auto;
+    }
+
+    .modal-content-text {
+        max-height: 400px;
+        overflow: scroll;
+    }
 }
