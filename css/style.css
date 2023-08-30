@@ -982,15 +982,14 @@ who end
     .banner__title {
         font-size: 18px;
     }
-
     .banner__subtext {
         max-width: 271px;
         font-size: 13px;
     }
 
     .banner__btn {
-        padding: 11px 50px;
-        font-size: 10.16px;
+        padding: 15px 50px;
+    font-size: 13.16px;
     }
 
     .banner__title {
@@ -1030,12 +1029,25 @@ who end
     }
 
     .modal-content {
-        width: 90%;
-        margin: 40% auto;
+        width: 80%;
     }
 
     .modal-content-text {
-        max-height: 400px;
+        max-height: 450px;
         overflow: scroll;
     }
+    .getting{
+        padding-top: 0;
+    }
+    .willbe {
+        padding-top: 35px;
+        padding-bottom: 0;
+    }
+    .cases__title {
+        margin: 35px 0 85px;
+    }
+
+}
+.procces{
+    padding-bottom: 0;
 }
