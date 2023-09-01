@@ -137,7 +137,8 @@ for (let item = 0; item < cases.length; item++) {
   const slideText = cases[item].querySelector('.swiper__content-text')
   const slideBtn = cases[item].querySelector('.swiper__content-read')
   const heightText = slideText.offsetHeight;
-  if (heightText > 174) {
+  console.log(heightText);
+  if (heightText > 236) {
     slideText.classList.add('gradient-overlay');
     cases[item].style.cursor = 'pointer';
     
