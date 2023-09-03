@@ -236,7 +236,6 @@
                 <div class="cases">
                     <div class="container cases__container">
                         <h2 class="title cases__title">відгуки</h2>
-
                         <!-- Slider main container -->
                         <div class="swiper">
                             <!-- Additional required wrapper -->
@@ -246,7 +245,12 @@
                                     <div class="swiper-slide__content">
                                         <div class="swiper__content-top">
                                             <img class="swiper__content-img" src="./img/cases/case1.jpg" alt="image">
-                                            <span class="swiper__content-name">Софія</span>
+                                            <div class="swiper__content-top_text">
+                                                <span class="swiper__content-name">Софія</span>
+                                                <span class="swiper__content-expert">
+                                                    КОПІАЙТЕР | МЕДИЧНИЙ КОПІРАЙТЕР | смм
+                                                </span>
+                                            </div>
                                         </div>
                                         <div class="swiper__content-bottom">
                                             <p class="swiper__content-text">
@@ -264,7 +268,12 @@
                                     <div class="swiper-slide__content">
                                         <div class="swiper__content-top">
                                             <img class="swiper__content-img" src="./img/cases/case1.jpg" alt="image">
-                                            <span class="swiper__content-name">Софія</span>
+                                            <div class="swiper__content-top_text">
+                                                <span class="swiper__content-name">Софія</span>
+                                                <span class="swiper__content-expert">
+                                                    КОПІАЙТЕР | МЕДИЧНИЙ КОПІРАЙТЕР | смм
+                                                </span>
+                                            </div>
                                         </div>
                                         <div class="swiper__content-bottom">
                                             <p class="swiper__content-text">
@@ -287,7 +296,12 @@
                                     <div class="swiper-slide__content">
                                         <div class="swiper__content-top">
                                             <img class="swiper__content-img" src="./img/cases/case1.jpg" alt="image">
-                                            <span class="swiper__content-name">Софія</span>
+                                            <div class="swiper__content-top_text">
+                                                <span class="swiper__content-name">Софія</span>
+                                                <span class="swiper__content-expert">
+                                                    КОПІАЙТЕР | МЕДИЧНИЙ КОПІРАЙТЕР | смм
+                                                </span>
+                                            </div>
                                         </div>
                                         <div class="swiper__content-bottom">
                                             <p class="swiper__content-text">
@@ -316,7 +330,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="programms programs__container">
+                <div class="programms ">
+                    <div class="container programs__container">
                         <h2 class="title programms__title">
                             Програма інтенсиву
                         </h2>
@@ -398,6 +413,30 @@
                         </div>
                         <div class="checkout">
                             <h3 class="checkout__title">знижка -80% може зникнути...</h1>
+                                <div class="countdown-wrapper">
+                                    <div id="year" class="year"></div>
+                                    <div class="countdown" id=countdown>
+                                        <div class="time">
+                                            <h2 id="days">00</h2>
+                                            <small>дні</small>
+                                        </div>
+                                        <div class="time">
+                                            <h2 id="hours">00</h2>
+                                            <small>години</small>
+                                        </div>
+                                        <div class="time">
+                                            <h2 id="minutes">00</h2>
+                                            <small>хвилини</small>
+                                        </div>
+                                        <div class="time">
+                                            <h2 id="seconds">00</h2>
+                                            <small>секунди</small>
+                                        </div>
+                                    </div>
+                                    <div class="preloader" id="preloader">
+                                        <div class="lds-ripple"><div></div><div></div></div>
+                                    </div>
+                                </div>
                             <div class="trigger">
                                 <span class="trigger__price-sale">371 грн</span>
                                 <span class="trigger__price">1855 грн</span>
@@ -406,6 +445,8 @@
                                 <button class="checkout__btn">придбати</button>
                             </a>
                         </div>
+                    </div>
+                        
                 </div>
             </section>
 

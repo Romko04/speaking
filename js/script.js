@@ -11,7 +11,7 @@ const btn = document?.querySelector('.closeModalBtn');
 let isModalOpen = false
 
 window.addEventListener('click', (event) => {
-  if (isModalOpen && !event.target.classList.contains('modal-content')|event.target.classList.contains('closeModalBtn')){
+  if (isModalOpen && event.target.classList.contains('modal') | event.target.classList.contains('close')) {
     closeModal()
   }
 });
@@ -98,6 +98,7 @@ images.forEach(image => {
 const openModal = (item) => {
   const name = item.querySelector('.swiper__content-name').textContent
   const text = item.querySelector('.swiper__content-text').textContent
+  const expert = item.querySelector('.swiper__content-expert').textContent
   const imgUrl = item.querySelector('.swiper__content-img').src;
 
   document.body.classList.add('body-block');
@@ -112,8 +113,8 @@ const openModal = (item) => {
       <div class="modal__content-top">
         <img class="swiper__content-img" src="${imgUrl}" alt="image">
         <div class="modal__content-top__text">
-            <span class="name">${name}</span> 
-            <span class="expert">${name}</span> 
+            <span class="swiper__content-name">${name}</span> 
+            <span class="swiper__content-expert">${expert}</span> 
         </div>                
       </div>
       <p class="modal-content-text">${text}</p>
@@ -137,11 +138,10 @@ for (let item = 0; item < cases.length; item++) {
   const slideText = cases[item].querySelector('.swiper__content-text')
   const slideBtn = cases[item].querySelector('.swiper__content-read')
   const heightText = slideText.offsetHeight;
-  console.log(heightText);
   if (heightText > 236) {
     slideText.classList.add('gradient-overlay');
     cases[item].style.cursor = 'pointer';
-    
+
     // Зберігаємо посилання на елемент cases[item]
     const currentCase = cases[item];
     cases[item].addEventListener('click', (e) => {
@@ -151,7 +151,7 @@ for (let item = 0; item < cases.length; item++) {
         openModal(cases[item]);
       }
     });
-    
+
   } else {
     slideBtn.classList.add('no-btn');
     slideText.style.paddingBottom = '25.9px';
@@ -159,4 +159,56 @@ for (let item = 0; item < cases.length; item++) {
 }
 
 
+/*Безкінечний таймер */
+// Определяем действующие элементы на странице
+const year = document.querySelector('#year');
+const days = document.querySelector('#days');
+const hours = document.querySelector('#hours');
+const minutes = document.querySelector('#minutes');
+const seconds = document.querySelector('#seconds');
+const countdown = document.querySelector('#countdown');
+const preloader = document.querySelector('#preloader');
 
+
+function updateCounter() {
+  const startDate = new Date('2023-08-10');
+  const currentDate = new Date()
+  const currentHour = currentDate.getHours();
+  const currentMinute = currentDate.getMinutes();
+  const currentSecond = currentDate.getSeconds();
+
+  const dateDiffInSeconds = currentDate - startDate // від 1 дати віднімає теперішню
+
+  const daysDiff = Math.abs(Math.floor(dateDiffInSeconds / (1000 * 60 * 60 * 24))); // вираховуєм різницю в днях
+
+  const dayOfCycle = Math.floor(daysDiff / 3); // дивимся який період циклу
+
+  const daysInCycleDiff = daysDiff - (dayOfCycle * 3) // вираховуєм який день циклу
+  /* значення дня цикла*/
+  const daysInMilliseconds = daysInCycleDiff * 24 * 60 * 60 * 1000;
+  const hoursInMilliseconds = currentHour * 60 * 60 * 1000;
+  const minutesInMilliseconds = currentMinute * 60 * 1000;
+  const secondsInMilliseconds = currentSecond * 1000;
+
+  const totalMilliseconds = daysInMilliseconds + hoursInMilliseconds + minutesInMilliseconds + secondsInMilliseconds; // день циклу в мілісекундах
+
+
+  const diffInMilliseconds = 259200000 - totalMilliseconds;// получаєм скільки лишилось до кінця циклу
+
+  const diffInDays = Math.floor(diffInMilliseconds / (24 * 60 * 60 * 1000));
+  const diffInHours = Math.floor((diffInMilliseconds % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+  const diffInMinutes = Math.floor((diffInMilliseconds % (60 * 60 * 1000)) / (60 * 1000));
+  const diffInSeconds = Math.floor((diffInMilliseconds % (60 * 1000)) / 1000);
+  
+  days.innerText = '0'+ diffInDays
+  hours.innerText = diffInHours < 10 ? '0' + diffInHours : diffInHours
+  minutes.innerText = diffInMinutes < 10 ? '0' + diffInMinutes : diffInMinutes
+  seconds.innerText = diffInSeconds < 10 ? '0' + diffInSeconds : diffInSeconds
+}
+
+// // Запускаем расчет 1 раз в секунду (каждую секунду)
+setInterval(updateCounter, 1000);
+
+setTimeout(function () {
+    countdown.style.display = 'flex';
+}, 1000);
