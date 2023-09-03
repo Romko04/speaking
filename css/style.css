@@ -841,9 +841,20 @@ who end
 }
 
 
-.cases__container {
+.swiper-android .swiper-slide, .swiper-ios .swiper-slide, .swiper-wrapper {
+    transform: translate3d(0px,0,0);
     padding-bottom: 100px;
 }
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+    border: 1px solid #FFF;
+}
+.swiper-pagination-bullet-active{
+    background-color: #D9D9D9;
+}
+
 .cases__title {
     margin: 90px 0;
 }
@@ -1025,7 +1036,7 @@ max-width: 100%;
 }
 
 .programms__title {
-    margin-bottom: 100px;
+    margin: 100px 0;
     
 }
 .programs__container{
