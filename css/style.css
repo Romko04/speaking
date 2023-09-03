@@ -196,7 +196,7 @@ img {
 
 .trigger {
     background-color: #424242;
-    padding: 25px 50px 25px 90px;
+    padding: 15px 50px 15px 90px;
     border-radius: 24px;
     margin: 40px 0;
     position: relative;
@@ -310,7 +310,7 @@ banner
 
 .banner__title {
     font-family: Unbounded;
-    font-size: 38.562px;
+    font-size: 27.562px;
     font-style: normal;
     font-weight: 600;
     line-height: 154.35%;
@@ -323,12 +323,12 @@ banner
 .banner__subtext {
     color: #fff;
     font-family: Unbounded;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 206.85%;
     text-transform: uppercase;
-    margin-bottom: 63px;
+    margin-bottom: 15px;
     max-width: 500px;
     padding-left: 12px;
     position: relative;
@@ -362,7 +362,8 @@ banner
     transition: all ease .2s;
 }
 .banner__buy-btn{
-    margin-bottom: 206px;
+    margin-bottom: 92px;
+
 }
 
 .banner__btn:hover {
@@ -458,7 +459,7 @@ gap: 12px;
 .who p {
     color: #FFF;
     font-family: Unbounded;
-    font-size: 18.84px;
+    font-size: 16.84px;
     font-style: normal;
     font-weight: 400;
     line-height: 192.3%;
@@ -1124,7 +1125,7 @@ text-transform: uppercase;
 }
 
 .trigger__price {
-    top: 42px;
+    top: 32px;
 }
 .checkout__btn {
     width: 100%;
@@ -1188,7 +1189,7 @@ line-height: normal;
 
 @media (min-width: 1550px) {
     .banner__logo {
-        margin-bottom: 250px;
+        margin-bottom: 88px;
     }
 
     .banner__logo-img {
