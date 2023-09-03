@@ -450,6 +450,11 @@ banner end
     display: block;
     text-align: center;
 }
+.willbe__list{
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
 .who p {
     color: #FFF;
     font-family: Unbounded;
