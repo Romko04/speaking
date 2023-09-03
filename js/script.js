@@ -171,7 +171,7 @@ const preloader = document.querySelector('#preloader');
 
 
 function updateCounter() {
-  const startDate = new Date('2023-08-10');
+  const startDate = new Date('2023-09-03');
   const currentDate = new Date()
   const currentHour = currentDate.getHours();
   const currentMinute = currentDate.getMinutes();
